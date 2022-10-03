@@ -1,0 +1,147 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#sky {
+    position: relative;
+    width: 100vw;
+    height: 360px;
+    margin: 0 0 0 0;
+    z-index: -1;
+    padding: 0 0 0 0;
+}
+
+#water {
+    position: relative;
+    margin: 0 0 0 0;
+    z-index: -1;
+    padding: 0 0 0 0;
+    width: 100vw;
+    height: 350px;
+}
+
+#water_conatiner {
+    position: relative;
+}
+
+#sky_container {
+    position: relative;
+}
+
+#sun {
+    position: absolute;
+    height: auto;
+    z-index: 0;
+    width: 180px;
+    left: 650px;
+    top: -28px;
+}
+
+.heli {
+    position: absolute;
+    height: auto;
+    z-index: 3;
+}
+
+.clouds {
+    position: absolute;
+    height: auto;
+    z-index: 2;
+}
+
+#cloud1 {
+    width: 270px;
+    top: 38px;
+    left: 260px;
+}
+
+#cloud2 {
+    width: 230px;
+    top: 45px;
+    left: 910px;
+}
+
+#heli_1 {
+    width: 111px;
+    top: 110px;
+    left: 1150px;
+}
+
+#heli_2 {
+    width: 90px;
+    left: 800px;
+    top: 210px;
+}
+
+#jet_1 {
+    width: 125px;
+    left: 140px;
+    top: 78px
+}
+
+.fishes {
+    position: absolute;
+    height: auto;
+    z-index: 10;
+}
+
+#submarine {
+    position: absolute;
+    height: auto;
+    z-index: 1;
+    width: 110px;
+    left: 650px;
+    top: 185px;
+
+}
+
+#fish1 {
+    width: 90px;
+    left: 290px;
+    top: 60px;
+}
+
+#fish2 {
+    width: 80px;
+    left: 90px;
+    top: 219px;
+}
+
+#fish3 {
+    width: 110px;
+    left: 550px;
+    top: 240px;
+
+}
+
+#fish4 {
+    width: 95px;
+    left: 1000px;
+    top: 140px;
+}
+
+#fish5 {
+    width: 100px;
+    left: 175px;
+    top: 110px;
+}
+
+#fish6 {
+    width: 135px;
+    top: 20px;
+    left: 900px;
+}
+
+#fish7 {
+    width: 75px;
+    top: 40px;
+    left: 1100px;
+}
+
+#fish8 {
+    width: 95px;
+    top: 190px;
+    left: 1180px;
+}
