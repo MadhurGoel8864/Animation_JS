@@ -41,7 +41,7 @@ body {
     z-index: 1;
     padding: 0 0 0 0;
     width: 100vw;
-    height: 350px;
+    height: 356px;
 }
 
 #water_conatiner {
@@ -56,7 +56,7 @@ body {
     position: absolute;
     height: auto;
     z-index: 0;
-    width: 180px;
+    width: 200px;
     left: 650px;
     top: -28px;
 }
@@ -86,20 +86,19 @@ body {
 }
 
 #heli_1 {
-    width: 111px;
-    top: 110px;
+    width: 100px;
+    top: 140px;
     left: 1150px;
 }
 
 #heli_2 {
-    width: 90px;
+    width: 115px;
     left: 800px;
     top: 210px;
 }
 
 #jet_1 {
     width: 125px;
-    left: 140px;
     top: 78px
 }
 
@@ -113,9 +112,9 @@ body {
     position: absolute;
     height: auto;
     z-index: 1;
-    width: 110px;
+    width: 115px;
     left: 650px;
-    top: 185px;
+    top: 210px;
 }
 
 #fish1 {
@@ -156,12 +155,6 @@ body {
 }
 
 #fish7 {
-    width: 75px;
-    top: 40px;
-    left: 1100px;
-}
-
-#fish8 {
     width: 95px;
     top: 190px;
     left: 1180px;
