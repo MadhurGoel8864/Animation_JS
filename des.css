@@ -4,6 +4,28 @@
     box-sizing: border-box;
 }
 
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(154, 255, 158);
+}
+
+#btn {
+    z-index: 15;
+    display: block;
+    background-color: chocolate;
+    font-size: 20px;
+    margin: auto;
+    color: blue;
+}
+
+#btn:hover {
+    color: gray;
+}
+
+
+
 #sky {
     position: relative;
     width: 100vw;
@@ -16,7 +38,7 @@
 #water {
     position: relative;
     margin: 0 0 0 0;
-    z-index: -1;
+    z-index: 1;
     padding: 0 0 0 0;
     width: 100vw;
     height: 350px;
@@ -94,7 +116,6 @@
     width: 110px;
     left: 650px;
     top: 185px;
-
 }
 
 #fish1 {
