@@ -35,12 +35,49 @@ function playsound2() {
         audios.pause();
     }
 }
+let jet_plane = document.getElementById("jet_1");
+let movement = 8;
+window.addEventListener('load', () => {
+    jet_plane.style.position = 'absolute';
+    jet_plane.style.left = '250px';
+    jet_plane.style.top = '120px';
+})
+window.addEventListener('keyup', (x) => {
+    switch (x.key) {
+        case 'ArrowLeft':
+            jet_plane.style.left = parseInt(jet_plane.style.left) - movement + "px";
+            break;
+        case 'a':
+            jet_plane.style.left = parseInt(jet_plane.style.left) - movement + "px";
+            break;
+        case 'ArrowRight':
+            jet_plane.style.left = parseInt(jet_plane.style.left) + movement + "px";
+            break;
+        case 'd':
+            jet_plane.style.left = parseInt(jet_plane.style.left) + movement + "px";
+            break;
+        case 'ArrowUp':
+            jet_plane.style.top = parseInt(jet_plane.style.top) - movement + "px";
+            break;
+        case 'w':
+            jet_plane.style.top = parseInt(jet_plane.style.top) - movement + "px";
+            break;
+        case 'ArrowDown':
+            jet_plane.style.top = parseInt(jet_plane.style.top) + movement + "px";
+            break;
+        case 's':
+            jet_plane.style.top = parseInt(jet_plane.style.top) + movement + "px";
+            break;
+
+        default:
+            break;
+    }
+})
 
 
 move_cloud1();
 move_cloud2();
 move_sun();
-move_jet();
 move_plane1();
 move_plane2();
 move_fish1();
@@ -215,17 +252,6 @@ function move_plane2() {
     }
 }
 
-function move_jet() {
-    var jet = document.getElementById('jet_1');
-    var posx = -   250;
-    setInterval(animate, 10);
-    function animate() {
-        jet.style.left = posx + "px";
-        posx += 1.7;
-        if (posx >= 1600)
-            posx = -250;
-    }
-}
 function move_cloud1() {
     var cloud_element = document.getElementById('cloud1');
     var posx = 0;

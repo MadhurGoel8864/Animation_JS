@@ -54,7 +54,6 @@ body {
     z-index: 3;
 }
 
-
 #heli_1 {
     width: 6.510%;
     top: 24.607%;
@@ -67,8 +66,8 @@ body {
 
 #jet_1 {
     width: 8.138%;
-    top: 28.92%;
 }
+
 
 .fishes {
     position: absolute;
