@@ -28,7 +28,6 @@ body {
     background-image: url(images/under_water.jpg);
     position: relative;
     background-size: 100% 100%;
-
     margin: 0 0 0 0;
     z-index: 1;
     padding: 0 0 0 0;
@@ -50,8 +49,8 @@ body {
     height: auto;
     z-index: 0;
     width: 12.0208%;
-    left: 42.317%;
-    top: -6.921%;
+    left: 660px;
+    top: -25px;
 }
 
 .heli {

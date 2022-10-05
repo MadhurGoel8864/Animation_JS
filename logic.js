@@ -1,3 +1,42 @@
+var chance = false;
+var pa = document.getElementById('sky_container');
+pa.addEventListener("click", playsound1);
+var aud = new Audio('audios/wind_sound.mp3');
+function playsound1() {
+    if (chance == false) {
+        chance = true;
+    }
+    else {
+        chance = false;
+    }
+    if (chance == true) {
+        aud.play();
+    }
+    else {
+        aud.pause();
+    }
+}
+
+var choice = false;
+var pax = document.getElementById('water_conatiner');
+pax.addEventListener("click", playsound2);
+var audios = new Audio('audios/water_sound.mp3');
+function playsound2() {
+    if (chance == false) {
+        chance = true;
+    }
+    else {
+        chance = false;
+    }
+    if (chance == true) {
+        audios.play();
+    }
+    else {
+        audios.pause();
+    }
+}
+
+
 move_cloud1();
 move_cloud2();
 move_sun();
@@ -17,7 +56,7 @@ function move_fish6() {
     var posy;
     var wave_y = 16;
     var change = 0;
-    setInterval(animate, 20);
+    var stop_fish_6 = setInterval(animate, 20);
     function animate() {
         change += 0.030;
         posx -= .7;
@@ -163,6 +202,7 @@ function move_plane1() {
             posx = 1600;
     }
 }
+
 function move_plane2() {
     var jet = document.getElementById('heli_2');
     var posx = 600;
@@ -174,6 +214,7 @@ function move_plane2() {
             posx = 1450;
     }
 }
+
 function move_jet() {
     var jet = document.getElementById('jet_1');
     var posx = -   250;
@@ -208,11 +249,11 @@ function move_sun() {
     var wave_x = 690;
     var posy = 0;
     var wave_y = 340;
-    var change = 0;
+    var change = 4.7;
     setInterval(animate, 60);
     function animate() {
         change += 0.012;
-        posx = 690 + Math.cos(change) * wave_x;
+        posx = 660 + Math.cos(change) * wave_x;
         posy = 300 + Math.sin(change) * wave_y;
         sun_element.style.left = posx + "px";
         sun_element.style.top = posy + "px";
@@ -253,6 +294,6 @@ function move_cloud2() {
         posy = 45 + Math.sin(change) * wave_y;
         cloud_element.style.left = posx + "px";
         cloud_element.style.top = posy + "px";
+
     }
 }
-
