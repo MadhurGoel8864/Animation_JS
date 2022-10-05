@@ -17,7 +17,7 @@ function move_fish6() {
     var posy;
     var wave_y = 16;
     var change = 0;
-    setInterval(animate, 12);
+    setInterval(animate, 20);
     function animate() {
         change += 0.030;
         posx -= .7;
@@ -34,7 +34,7 @@ function move_fish5() {
     var posy;
     var wave_y = 26;
     var change = 0;
-    setInterval(animate, 12);
+    setInterval(animate, 25);
     function animate() {
         change += 0.030;
         posx -= 1.3;
@@ -51,7 +51,7 @@ function move_fish4() {
     var posy;
     var wave_y = 8;
     var change = 0;
-    setInterval(animate, 12);
+    setInterval(animate, 13);
     function animate() {
         change += 0.050;
         posx -= 1;
@@ -67,7 +67,7 @@ var direction = 1;
 function move_submarine() {
     var submarine = document.getElementById('submarine');
     var posx = -250;
-    setInterval(animate, 1);
+    setInterval(animate, 6);
     function animate() {
         submarine.style.left = posx + "px";
         if (posx >= -250 && posx <= 1600 && direction == 1) {
@@ -90,7 +90,7 @@ function move_fish7() {
     var posy;
     var wave_y = 16;
     var change = 0;
-    setInterval(animate, 12);
+    setInterval(animate, 26);
     function animate() {
         change += 0.050;
         posx += 1;
@@ -205,15 +205,15 @@ function move_cloud1() {
 function move_sun() {
     var sun_element = document.getElementById('sun');
     var posx = 0;
-    var wave_x = 710;
+    var wave_x = 690;
     var posy = 0;
-    var wave_y = 270;
+    var wave_y = 340;
     var change = 0;
     setInterval(animate, 60);
     function animate() {
-        change += 0.032;
+        change += 0.012;
         posx = 690 + Math.cos(change) * wave_x;
-        posy = 228 + Math.sin(change) * wave_y;
+        posy = 300 + Math.sin(change) * wave_y;
         sun_element.style.left = posx + "px";
         sun_element.style.top = posy + "px";
         var x = document.getElementById('sky');
@@ -221,16 +221,20 @@ function move_sun() {
         var a = document.getElementById('cloud1');
         var b = document.getElementById('cloud2');
         if (posy > 280) {
-            x.src = "images/dark_back.jpg";
+            x.style.backgroundImage = 'url(images/dark_back.jpg)';
+            y.style.backgroundImage = 'url(images/dark_water.jpeg)';
+            // a.style.backgroundImage = 'url(images/dark_clouds.png)';
+            // b.style.backgroundImage = 'url(images/dark_clouds.png)';
             a.src = "images/dark_clouds.png";
             b.src = "images/dark_clouds.png";
-            y.src = "images/dark_water.jpeg";
         }
         else {
             a.src = "images/cloud_samp.png";
             b.src = "images/cloud_samp.png";
-            y.src = "images/under_water.jpg";
-            x.src = "images/back_groung.jpg";
+            // a.style.backgroundImage = 'url(images/cloud_samp.png)';
+            // b.style.backgroundImage = 'url(images/cloud_samp.png)';
+            y.style.backgroundImage = 'url(images/under_water.jpg)';
+            x.style.backgroundImage = 'url(images/back_groung.jpg)';
 
         }
     }

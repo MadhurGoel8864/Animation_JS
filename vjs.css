@@ -1,0 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#back {
+    width: 200px;
+    height: 300px;
+}

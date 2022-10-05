@@ -11,37 +11,29 @@ body {
     background-color: rgb(154, 255, 158);
 }
 
-#btn {
-    z-index: 15;
-    display: block;
-    background-color: chocolate;
-    font-size: 20px;
-    margin: auto;
-    color: blue;
-}
-
-#btn:hover {
-    color: gray;
-}
-
-
-
 #sky {
+    transition: 3s ease;
     position: relative;
-    width: 100vw;
-    height: 360px;
+    background-image: url(images/back_groung.jpg);
+    width: 100%;
+    background-size: 100% 100%;
+    height: 52vh;
     margin: 0 0 0 0;
     z-index: -1;
     padding: 0 0 0 0;
 }
 
 #water {
+    transition: 3s ease;
+    background-image: url(images/under_water.jpg);
     position: relative;
+    background-size: 100% 100%;
+
     margin: 0 0 0 0;
     z-index: 1;
     padding: 0 0 0 0;
-    width: 100vw;
-    height: 356px;
+    width: 100%;
+    height: 48vh;
 }
 
 #water_conatiner {
@@ -52,13 +44,14 @@ body {
     position: relative;
 }
 
+
 #sun {
     position: absolute;
     height: auto;
     z-index: 0;
-    width: 200px;
-    left: 650px;
-    top: -28px;
+    width: 12.0208%;
+    left: 42.317%;
+    top: -6.921%;
 }
 
 .heli {
@@ -67,39 +60,26 @@ body {
     z-index: 3;
 }
 
-.clouds {
-    position: absolute;
-    height: auto;
-    z-index: 2;
-}
-
-#cloud1 {
-    width: 270px;
-    top: 38px;
-    left: 260px;
-}
-
-#cloud2 {
-    width: 230px;
-    top: 45px;
-    left: 910px;
-}
 
 #heli_1 {
-    width: 100px;
-    top: 140px;
-    left: 1150px;
+    width: 6.510%;
+    top: 24.607%;
+    left: 74.86%;
 }
 
+/* 714
+1536 */
+
+
 #heli_2 {
-    width: 115px;
-    left: 800px;
-    top: 210px;
+    width: 7.486%;
+    left: 52.083%;
+    top: 57.411%;
 }
 
 #jet_1 {
-    width: 125px;
-    top: 78px
+    width: 8.138%;
+    top: 28.92%;
 }
 
 .fishes {
@@ -112,50 +92,70 @@ body {
     position: absolute;
     height: auto;
     z-index: 1;
-    width: 115px;
-    left: 650px;
-    top: 210px;
+    width: 8.486%;
+    left: 42.317%;
+    top: 54.411%;
 }
 
 #fish1 {
-    width: 90px;
-    left: 290px;
-    top: 60px;
+    width: 5.859%;
+    left: 18.88%;
+    top: 8.403%;
 }
 
 #fish2 {
-    width: 80px;
-    left: 90px;
-    top: 219px;
+    width: 5.208%;
+    left: 5.859%;
+    top: 60.672%;
 }
 
 #fish3 {
-    width: 110px;
-    left: 550px;
-    top: 240px;
-
+    width: 7.161%;
+    left: 35.807%;
+    top: 33.613%;
 }
 
+
+
 #fish4 {
-    width: 95px;
-    left: 1000px;
-    top: 140px;
+    width: 6.184%;
+    left: 75.104%;
+    top: 42.607%;
 }
 
 #fish5 {
-    width: 100px;
-    left: 175px;
-    top: 110px;
+    width: 6.510%;
+    left: 11.393%;
+    top: 17.406%;
 }
 
 #fish6 {
-    width: 135px;
-    top: 20px;
-    left: 900px;
+    width: 8.789%;
+    top: 59.801%;
+    left: 58.59%;
 }
 
 #fish7 {
-    width: 95px;
-    top: 190px;
-    left: 1180px;
+    width: 6.184%;
+    top: 26.61%;
+    left: 76.82%;
+}
+
+.clouds {
+    position: absolute;
+    height: auto;
+    z-index: 1;
+
+}
+
+#cloud1 {
+    width: 17.578%;
+    top: 5.722%;
+    left: 16.927%;
+}
+
+#cloud2 {
+    width: 17.578%;
+    top: 16.402%;
+    left: 61.244%;
 }
