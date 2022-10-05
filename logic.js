@@ -1,15 +1,15 @@
-var chance = false;
-var pa = document.getElementById('sky_container');
-pa.addEventListener("click", playsound1);
+var current1 = false;
+var sky_sound = document.getElementById('sky_container');
+sky_sound.addEventListener("click", playsound1);
 var aud = new Audio('audios/wind_sound.mp3');
 function playsound1() {
-    if (chance == false) {
-        chance = true;
+    if (current1 == false) {
+        current1 = true;
     }
     else {
-        chance = false;
+        current1 = false;
     }
-    if (chance == true) {
+    if (current1 == true) {
         aud.play();
     }
     else {
@@ -17,18 +17,18 @@ function playsound1() {
     }
 }
 
-var choice = false;
-var pax = document.getElementById('water_conatiner');
-pax.addEventListener("click", playsound2);
+var current2 = false;
+var sound_water = document.getElementById('water_conatiner');
+sound_water.addEventListener("click", playsound2);
 var audios = new Audio('audios/water_sound.mp3');
 function playsound2() {
-    if (chance == false) {
-        chance = true;
+    if (current2 == false) {
+        current2 = true;
     }
     else {
-        chance = false;
+        current2 = false;
     }
-    if (chance == true) {
+    if (current2 == true) {
         audios.play();
     }
     else {
@@ -264,16 +264,12 @@ function move_sun() {
         if (posy > 280) {
             x.style.backgroundImage = 'url(images/dark_back.jpg)';
             y.style.backgroundImage = 'url(images/dark_water.jpeg)';
-            // a.style.backgroundImage = 'url(images/dark_clouds.png)';
-            // b.style.backgroundImage = 'url(images/dark_clouds.png)';
             a.src = "images/dark_clouds.png";
             b.src = "images/dark_clouds.png";
         }
         else {
             a.src = "images/cloud_samp.png";
             b.src = "images/cloud_samp.png";
-            // a.style.backgroundImage = 'url(images/cloud_samp.png)';
-            // b.style.backgroundImage = 'url(images/cloud_samp.png)';
             y.style.backgroundImage = 'url(images/under_water.jpg)';
             x.style.backgroundImage = 'url(images/back_groung.jpg)';
 
@@ -294,6 +290,5 @@ function move_cloud2() {
         posy = 45 + Math.sin(change) * wave_y;
         cloud_element.style.left = posx + "px";
         cloud_element.style.top = posy + "px";
-
     }
 }
