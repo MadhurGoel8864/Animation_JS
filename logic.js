@@ -42,16 +42,35 @@ window.addEventListener('load', () => {
     jet_plane.style.left = '250px';
     jet_plane.style.top = '120px';
 })
-window.addEventListener('keyup', (x) => {
+var change = 0;
+window.addEventListener('keydown', (x) => {
+
     switch (x.key) {
         case 'ArrowLeft':
             jet_plane.style.left = parseInt(jet_plane.style.left) - movement + "px";
+
             break;
         case 'a':
             jet_plane.style.left = parseInt(jet_plane.style.left) - movement + "px";
             break;
         case 'ArrowRight':
-            jet_plane.style.left = parseInt(jet_plane.style.left) + movement + "px";
+
+            var posy;
+            var wave_y = 25;
+            change += 0.2;
+            posy = Math.sin(change) * wave_y;
+            if (posy > 0) {
+                jet_plane.style.left = parseInt(jet_plane.style.left) + movement + "px";
+            }
+            else {
+                // jet_plane.style.top = parseInt(jet_plane.style.top) + posy + "px";
+
+                jet_plane.style.left = parseInt(jet_plane.style.left) + movement + "px";
+            }
+            jet_plane.style.top = parseInt(jet_plane.style.top) + posy + "px";
+            // jet_plane.style.top = parseInt(jet_plane.style.top) - posy + "px";
+
+
             break;
         case 'd':
             jet_plane.style.left = parseInt(jet_plane.style.left) + movement + "px";
@@ -73,8 +92,6 @@ window.addEventListener('keyup', (x) => {
             break;
     }
 })
-
-
 move_cloud1();
 move_cloud2();
 move_sun();
@@ -95,9 +112,7 @@ function move_fish6() {
     var change = 0;
     var stop_fish_6 = setInterval(animate, 20);
     function animate() {
-        change += 0.030;
         posx -= .7;
-        posy = 20 + Math.cos(change) * wave_y;
         if (posx <= -150)
             posx = 1550;
         fish.style.left = posx + "px";
@@ -256,16 +271,12 @@ function move_cloud1() {
     var cloud_element = document.getElementById('cloud1');
     var posx = 0;
     var wave_x = 150;
-    var posy = 38;
-    var wave_y = 0;
     var change = 0;
     setInterval(animate, 100);
     function animate() {
         change += 0.062;
         posx = 260 + Math.sin(change) * wave_x;
-        posy = 38 + Math.sin(change) * wave_y;
         cloud_element.style.left = posx + "px";
-        cloud_element.style.top = posy + "px";
     }
 }
 
@@ -306,15 +317,11 @@ function move_cloud2() {
     var cloud_element = document.getElementById('cloud2');
     var posx = 0;
     var wave_x = -150;
-    var posy = 0;
-    var wave_y = 0;
     var change = 0;
     setInterval(animate, 100);
     function animate() {
         change += 0.062;
         posx = 910 + Math.sin(change) * wave_x;
-        posy = 45 + Math.sin(change) * wave_y;
         cloud_element.style.left = posx + "px";
-        cloud_element.style.top = posy + "px";
     }
 }

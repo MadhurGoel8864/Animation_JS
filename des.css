@@ -55,6 +55,7 @@ body {
 }
 
 #heli_1 {
+    transform: rotateY("180 deg");
     width: 6.510%;
     top: 24.607%;
 }
